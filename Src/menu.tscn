@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcj4gaii43ebn"]
 
-[ext_resource type="Script" path="res://Src/Menu.gd" id="1_hw36x"]
-[ext_resource type="PackedScene" uid="uid://ckrtfu4pci38k" path="res://Src/bg.tscn" id="2_ng5lh"]
+[ext_resource type="Script" path="res://src/Menu.gd" id="1_wne38"]
+[ext_resource type="PackedScene" uid="uid://ckrtfu4pci38k" path="res://src/bg.tscn" id="2_k0pbd"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hw36x")
+script = ExtResource("1_wne38")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -35,7 +35,7 @@ text = "Level selection"
 layout_mode = 2
 text = "Quit"
 
-[node name="bg" parent="." instance=ExtResource("2_ng5lh")]
+[node name="bg" parent="." instance=ExtResource("2_k0pbd")]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
