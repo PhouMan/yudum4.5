@@ -2,13 +2,12 @@ extends CharacterBody2D
 
 
 
-const GRAVITY := 50
-const SPEED = 300.0
-const JUMP_VELOCITY = -300.0
+const GRAVITY := 55
+const SPEED = 100.0
+const JUMP_VELOCITY = -50.0
 const MAX_JUMP := 2
 var ySpeed = 0
 var jumpCount = 0
-var temp_Y_data = Vector2.ZERO
 var isJumping = false
 var isFalling = false
 
@@ -20,10 +19,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		if ySpeed < 0:
 			isJumping = true
-		elif ySpeed >= 0:
+		elif ySpeed > 0:
 			isFalling = true
 			
-		ySpeed-= GRAVITY * delta
+		ySpeed += GRAVITY * delta 
 	
 	else:
 		jumpCount = 0
@@ -32,6 +31,7 @@ func _physics_process(delta: float) -> void:
 
 	# Jumping and Double Jumping
 	if Input.is_action_just_pressed("ui_up") and jumpCount < MAX_JUMP:
+		jumpCount += 1
 		ySpeed = JUMP_VELOCITY
 		isJumping = true
 		$playerAnimation.play("jump")
@@ -43,13 +43,17 @@ func _physics_process(delta: float) -> void:
 	
 	if isFalling:
 		$playerAnimation.play("fall")
-		
-	if not isFalling:
+	
+	if xSpeed > 0:
+		$playerAnimation.flip_h = false
+	elif xSpeed < 0:
+		$playerAnimation.flip_h = true
+			
+	
+	if not isFalling and not isJumping:
 		if xSpeed > 0:
-			$playerAnimation.flip_h = false
 			$playerAnimation.play("run")
 		elif xSpeed < 0:
-			$playerAnimation.flip_h = true
 			$playerAnimation.play("run")
 		else: 
 			$playerAnimation.play("Idle")
