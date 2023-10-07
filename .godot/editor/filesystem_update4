@@ -1,6 +1,4 @@
-res://Src/World.tscn
-res://Player.gd
-res://Menu.gd
-res://bg.tscn
-res://menu.tscn
-res://instruction_menu.tscn
+res://src/menu.tscn
+res://src/bg.tscn
+res://src/player.tscn
+res://src/level.tscn
