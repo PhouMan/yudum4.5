@@ -32,10 +32,11 @@ func _physics_process(delta: float) -> void:
 		jumpCount += 1
 		ySpeed = JUMP_VELOCITY
 		isJumping = true
+		isFalling = false
 		$playerAnimation.play("jump")
 
 	# Get the input direction and handle the movement/deceleration.
-	# Note get_axis() is short ahnd for input_actionStrengh1 - inputactionStrength2
+	# Note get_axis() is short hand for input_actionStrengh1 - inputactionStrength2
 	xSpeed = Input.get_axis("ui_left", "ui_right")
 	xSpeed *= SPEED
 	
