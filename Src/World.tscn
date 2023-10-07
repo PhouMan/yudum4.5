@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://csj7wpsha0fa7"]
+[gd_scene load_steps=3 format=3 uid="uid://beu0hyyppuv2c"]
 
-[ext_resource type="PackedScene" uid="uid://3plu4yup86ih" path="res://Src/tile_map.tscn" id="1_hhkeb"]
-[ext_resource type="PackedScene" uid="uid://bk5eep8fbnqv6" path="res://Src/player.tscn" id="2_iinlm"]
+[ext_resource type="PackedScene" uid="uid://c6e68q4tq6cty" path="res://Src/tile_map.tscn" id="1_hhkeb"]
+[ext_resource type="PackedScene" uid="uid://0vdq13ikxf20" path="res://Src/player.tscn" id="2_iinlm"]
 
 [node name="Node2D" type="Node2D"]
 

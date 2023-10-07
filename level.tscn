@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq066wqf18edy"]
+
+[ext_resource type="PackedScene" uid="uid://b5jhh2743bo7v" path="res://bg.tscn" id="1_6j1es"]
+
+[node name="level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 151.0
+offset_right = 200.0
+offset_bottom = 182.0
+text = "1"
+
+[node name="level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 160.0
+offset_right = 315.0
+offset_bottom = 191.0
+text = "2"
+
+[node name="level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 29.0
+offset_right = 63.0
+offset_bottom = 37.0
+text = "3"
+
+[node name="bg" parent="." instance=ExtResource("1_6j1es")]
