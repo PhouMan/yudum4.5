@@ -1,7 +1,7 @@
 extends Control
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://src/World.tscn")
+	get_tree().change_scene_to_file("res://Src/World.tscn")
 
 
 func _on_instructions_pressed():
